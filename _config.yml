@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: 2019-2023 The Foundation for Public Code <info@publiccode.net>, https://standard.publiccode.net/AUTHORS
+
+title: Test Subproject One
+version: 0.0.1
+
+remote_theme: publiccodenet/jekyll-theme
