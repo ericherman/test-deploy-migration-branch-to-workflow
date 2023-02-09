@@ -47,7 +47,7 @@ This workflow assumes a jekyll build, however your build can be more sophisticat
 
 ### Process
 
-In this repository, the `main` branch is were active development happens.
+In this repository, the `main` branch is where active development happens.
 To create a release, a pull request from `main` to `release` will be merged.
 The workflow defined in `jekyll-gh-pages.yml` will be launched by the merge.
 The workflow will build the site and push the results to the `gh-pages` branch.
