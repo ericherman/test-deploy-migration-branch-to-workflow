@@ -5,3 +5,4 @@ title: Test Subproject One
 version: 0.0.1
 
 remote_theme: publiccodenet/jekyll-theme
+baseurl: /test-deploy-migration-branch-to-workflow
