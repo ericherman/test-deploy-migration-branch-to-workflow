@@ -39,17 +39,17 @@ At this point there is a branch that builds can be pushed to.
 
 This workflow assumes a jekyll build, however your build can be more sophisticated if you change the steps inside the workflow.
 
-1. Add [.github/workflows/jekyll-gh-pages.yml](.github/workflows/jekyll-gh-pages.yml)
-2. In the `jekyll-gh-pages.yml` file, edit the branch name at `branches: ["release"]` to match the name of the repository's release branch.
+1. Add [.github/workflows/release-gh-pages.yml](.github/workflows/release-gh-pages.yml)
+2. In the `release-gh-pages.yml` file, edit the branch name at `branches: ["release"]` to match the name of the repository's release branch.
 3. push and merge
 
 ## Conclusion
 
 ### Process
 
-In this repository, the `main` branch is were active development happens.
+In this repository, the `main` branch is where active development happens.
 To create a release, a pull request from `main` to `release` will be merged.
-The workflow defined in `jekyll-gh-pages.yml` will be launched by the merge.
+The workflow defined in `release-gh-pages.yml` will be launched by the merge.
 The workflow will build the site and push the results to the `gh-pages` branch.
 Github then deploys the results to the `github.io`.
 
