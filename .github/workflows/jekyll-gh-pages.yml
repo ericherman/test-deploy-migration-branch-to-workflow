@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   # Build job
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,17 +38,6 @@ jobs:
       - name: jekyll build
         run: bundle exec jekyll build
       - name: build list files
-        run: find ./_site -type f
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: deploy list files
         run: find ./_site -type f
       - name: Deploy to GitHub Pages
         id: deployment
