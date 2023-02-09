@@ -36,4 +36,5 @@ Now we have a branch we can push build and push to.
 This workflow assumes a jekyll build, however your build can be more sophisticated if you change the steps inside the workflow
 
 1. Add [.github/workflows/jekyll-gh-pages.yml](.github/workflows/jekyll-gh-pages.yml)
-2. push and merge
+2. In the `jekyll-gh-pages.yml` file, edit the branch name at `branches: ["release"]` to match the name of the repository's release branch.
+3. push and merge
