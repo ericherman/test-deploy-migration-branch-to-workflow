@@ -40,7 +40,7 @@ At this point there is a branch that builds can be pushed to.
 This workflow assumes a jekyll build, however your build can be more sophisticated if you change the steps inside the workflow.
 
 1. Add [.github/workflows/release-gh-pages.yml](.github/workflows/release-gh-pages.yml)
-2. In the `release-gh-pages.yml` file, edit the branch name at `branches: ["release"]` to match the name of the repository's release branch.
+2. In the `release-gh-pages.yml` file, edit the branch name at `branches: ["release"]` to match the name of the repository's release branch. If the codebase follows continuous deployment of each merge to `main`, there is no need for a separate release branch, this can be `main`.
 3. push and merge
 
 ## Conclusion
