@@ -53,6 +53,8 @@ main | The `main` branch is where active development happens. Most pull requests
 release | To create a release, open and merge a pull request from `main` to `release`. The workflow defined in `release-gh-pages.yml` will be launched by the merge.
 gh-pages | The workflow launched by the merge will generate the HTML, CSS, JavaScript and other assets from the `release` branch. After building, the workflow will push the results to the `gh-pages` branch.  Github automatically deploys the contents of the `gh-pages` branch to [github.io](https://ericherman.github.io/test-deploy-migration-branch-to-workflow/).
 
+This can be simplified: the workflow can be put to the `main` branch and trigger a new release with every merge to `main` if that better suits the maintainers.
+
 ### Downsides
 
 * From time-to-time someone may need to update the GitHub workflow file, and thus need to learn about [GitHub Workflows](https://docs.github.com/en/actions/using-workflows).
@@ -60,7 +62,7 @@ gh-pages | The workflow launched by the merge will generate the HTML, CSS, JavaS
 
 ### Advantages
 
-* Can be simplified: the workflow can be put to the `main` branch and trigger a new release with every merge to `main`.
 * If desired, the build process can be extended and made more sophisticated.
 * The history of the _results_ of the releases can be reviewed with git.
 * If used as a sub-project, the super-project can use the `gh-pages` branch, thus being "tool agnostic" about whatever build process the sub-project chooses.
+
