@@ -60,6 +60,7 @@ gh-pages | The workflow launched by the merge will generate the HTML, CSS, JavaS
 
 ### Advantages
 
+* Can be simplified: the workflow can be put to the `main` branch and trigger a new release with every merge to `main`.
 * If desired, the build process can be extended and made more sophisticated.
 * The history of the _results_ of the releases can be reviewed with git.
 * If used as a sub-project, the super-project can use the `gh-pages` branch, thus being "tool agnostic" about whatever build process the sub-project chooses.
