@@ -45,13 +45,13 @@ This workflow assumes a jekyll build, however your build can be more sophisticat
 
 ## Conclusion
 
-### Process
+### Branches
 
-In this repository, the `main` branch is where active development happens.
-To create a release, a pull request from `main` to `release` will be merged.
-The workflow defined in `release-gh-pages.yml` will be launched by the merge.
-The workflow will build the site and push the results to the `gh-pages` branch.
-Github then deploys the results to the `github.io`.
+branch name | process notes
+-----|-----
+main | The `main` branch is where active development happens. Most pull requests are opened against this branch.
+release | To create a release, open and merge a pull request from `main` to `release`. The workflow defined in `release-gh-pages.yml` will be launched by the merge.
+gh-pages | The workflow launched by the merge will generate the HTML, CSS, JavaScript and other assets from the `release` branch. After building, the workflow will push the results to the `gh-pages` branch.  Github automatically deploys the contents of the `gh-pages` branch to [github.io](https://ericherman.github.io/test-deploy-migration-branch-to-workflow/).
 
 ### Downsides
 
